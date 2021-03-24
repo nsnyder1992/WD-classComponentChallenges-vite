@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Button} from 'reactstrap';
 
 export default class DogIndex extends Component {
     constructor(props) {
@@ -31,8 +32,9 @@ export default class DogIndex extends Component {
     render() {
         return (
             <div>
-                <img src={this.state.dogImage} alt="..."/>
-                <button onClick={this.getImage}>Get Another Image!</button>
+                <img style={{margin: 10, height: 250}} src={this.state.dogImage} alt="..."/>
+                <br />
+                <Button onClick={this.getImage}>Get Another Image!</Button>
                 {this.state.error ? <p>{this.state.error}</p> : null}
             </div>
         )

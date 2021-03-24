@@ -54,9 +54,10 @@ console.log(tempToDos)
         return (
             <div>
                 <form onSubmit={e => this.addToDo(e)} >
-                    <Input placeholder='Search Here' onChange={e => this.handleChange(e)}/>
+                    <Input style={{marginBottom: 10}} placeholder='Task Name' onChange={e => this.handleChange(e)}/>
                     <Button type="submit">Add To Do</Button>
                 </form>
+                <hr />
                 {Object.keys(this.state.toDos).map((key) => {
                     return <ToDoItem key={key} index={key} value={this.state.toDos[key]} updateToDo={this.updateToDo}/>
                 })}
